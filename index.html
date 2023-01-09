@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <!-- autobell.co.kr -->
+    <div id="wrap">
+        <header id="main_header">
+            <nav id="main_top_nav_wrap">
+                <div id="top_nav">
+                    <!-- 메뉴 작업은 ul과 li로, button은 진짜 button모습! -->
+                    <ul id="login_wrap">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+                <!-- 겹치는 경우 id를 우선순위로 적용, grid작업은 대부분 class이고 명칭에 -붙은게 많다. 하드코딩이 아닌 가져와서 쓴것. -->
+                <div id="bottom_nav" class="width_box">
+                    <ul id="logo_wrap">
+                        <li>1</li>
+                        <li>2</li>
+                    </ul>
+                    <ul id="main_wrap">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <ul id="right_menu_wrap">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- 동적인 부분 들어감 -->
+            <figure id="banner_wrap" class="width_box"> 
+                <div id="main_banner">
+                    
+                </div>
+            </figure>
+            <div id="search_wrap">
+
+            </div>
+        </header>
+        <section id="section_1">
+            <!-- 하나로 안잡으면 배율 조절시 두 파트가 양옆으로 나눠짐.. css에서 float은 가로정렬 작업. 부모가 있어야지만.. -->
+            <article id="buy_wrap">
+                <div id="buy_left">
+
+                </div>
+                <div id="buy_right">
+
+                </div>
+            </article>
+        </section>
+        <section id="section_2">
+            <h2 id="sec2_tit"></h2>
+            <article id="sec2_con_wrap"></article>
+        </section>
+        <section id="section_3">
+            <h2 id="sec3_tit"></h2>
+            <article id="sec3_con_wrap"></article>
+        </section>
+        <section id="section_4">
+            <h2 id="sec4_tit"></h2>
+            <article id="sec4_con_wrap"></article>
+        </section>
+        <section id="section_5">
+            <h2 id="sec5_tit"></h2>
+            <article id="sec5_con_wrap"></article>
+        </section>
+        <section id="section_6">
+            <article id="sec6_con_wrap"></article>
+        </section>
+        <footer id="main_footer">
+
+        </footer>
+    </div>
+</body>
+</html>

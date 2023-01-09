@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #out_box{
+            width: 900px;
+            height: 500px;
+            border: 10px solid black;
+            margin: 0 auto;
+            position: relative;
+        }
+        .in_box {
+            width: 300px;
+            height: 300px;
+            background: rgb(255, 242, 242);
+            border: 10px solid rgb(236, 236, 255);
+            position: absolute;
+            font-size: 100px;
+            /* 
+            position: relative; 
+            상대 위치값, 기준 자기자신의 왼쪽 상단점, margin이나 padding, float과 같은 상대값을 사용하면서 position 지정이 가능함 
+             */
+            /* 
+            position: absolute; 
+            부모의 왼쪽 상단점을 기준으로, 절대 위치값, 내가 absolute이면 나의 부모에게는 position값(relative.. 상관없음)이 지정되어야함
+            */
+            /* 
+            position: fixed; 
+            윈도우의 왼쪽 상단점 기준, 고정영역, 부모의 영역 설정값과 상관 없음
+            */
+        }
+        /* 자식 구조 일때 순서상 선택하는 방법, 배열형식으로 사용하되 1부터 시작. 동일한 형식의 class나 tag에 사용. 수치값으로 선택할수도 있다. 
+        type선택자는 형제관계에서 선택하는것  */
+        .in_box:nth-child(1){
+            top: 0;
+            left: 0;
+            /* 레이어 순서 지정 속성, 0 보다 크면 위로 올라옴 */
+            z-index: 10;
+        }
+        .in_box:nth-child(2){
+            top: 150px;
+            left: 150px;
+            
+        }
+        .in_box:nth-child(3){
+            /* top: 450px;
+            left: 450px; */
+            /* 떨어지는값이 +, 겹쳐지는 값이 - */
+            /* top: 0;
+            left: 300px; */
+            /* 900(부모)-300(나)=600/2=300, 부모 값의 반으로 처리하면 왼쪽 위 기준이므로 중앙에 배치 되지 못함 */
+            top: 50%;
+            left: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+            /* 
+            position: absolute일때 가로 중앙 세로 중앙 위치, 부모의 크기 바뀌어도 위치 그대로 유지
+            1. 가로 중앙
+            left : 50% -> 부모의 가로 값의 반 위치에 설정
+            margin-left : -나의 가로값의 반크기 설정
+            2. 세로 중앙
+            top : 50% -> 부모의 세로 값의 반 위치에 설정
+            margin-top : -나의 세로값의 반크기 설정
+            */
+        }
+    </style>
+</head>
+<body>
+    <div id="out_box">
+        <div class="in_box">1</div>
+        <div class="in_box">2</div>
+        <div class="in_box">3</div>
+    </div>
+</body>
+</html>
